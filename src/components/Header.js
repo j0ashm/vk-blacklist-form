@@ -8,7 +8,7 @@ import { BsFillSunFill } from 'react-icons/bs'
 function Header() {
     const { colorMode, toggleColorMode } = useColorMode()
     const icons = useColorModeValue(<FaMoon />, <BsFillSunFill />)
-    
+
     return (
         <Flex mt="3" borderBottom="1px">
             <Box p="3">
@@ -16,7 +16,7 @@ function Header() {
             </Box>
             <Spacer />
             <Box p="3">
-                <IconButton icon={icons} variant="ghost" onClick={toggleColorMode} />
+                <IconButton icon={icons} variant="ghost" onClick={toggleColorMode} aria-label={colorMode == 'light' ? "Switch to dark mode" : "Switch to light mode"}/>
             </Box>
         </Flex>
     )
