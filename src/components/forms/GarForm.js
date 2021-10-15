@@ -2,15 +2,19 @@ import React, {useState} from 'react'
 
 import {
     FormControl,
-    FormLabel
+    FormLabel,
+    useToast
 } from "@chakra-ui/react"
 import { Input } from '@chakra-ui/input'
 import { Box, Flex, Stack } from '@chakra-ui/layout'
 import { Radio, RadioGroup } from '@chakra-ui/radio'
 import { Button } from '@chakra-ui/button'
 
+import axios from 'axios'
+
 function GarForm() {
     const [formValues, setFormValues] = useState({});
+    const successToast = useToast()
 
     function onInputChange(e) {
         const { name, value } = e.target;
@@ -23,11 +27,32 @@ function GarForm() {
 
     function handleSubmit(e) {
         e.preventDefault();
-        console.log(formValues);
+        const { submitterUsername, toBLUsername, profileLink, discordID, reason, division, duration, status } = formValues 
+
+        axios.post(`${process.env.REACT_APP_POST_URL}/gar`, {
+            submitterUsername: `${submitterUsername}`,
+            toBLUsername: `${toBLUsername}`,
+            profileLink: `${profileLink}`,
+            discordID: `${discordID}`,
+            blReason: `${reason}`,
+            division: `${division}`,
+            duration: `${duration}`,
+            status: `${status}`
+        })
+        .then(res => {
+            console.log(res)
+            successToast({
+                title: `Form Submitted!`,
+                description: `Your blacklist request has been submitted for user: ${formValues.toBLUsername}!`,
+                status: 'success',
+                duration: 10000,
+                isClosable: false
+            });
+        })
     }
 
     return (
-        <form action="submit" onSubmit={handleSubmit}>
+        <form action="submit" onSubmit={handleSubmit} autoComplete="off">
             <FormControl isRequired>
                 <Flex mt="5">
                     <Box mr="2">
