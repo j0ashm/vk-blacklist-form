@@ -27,7 +27,7 @@ router.post('/create/gar', (req, res) => {
             if (err) {
                 console.log(err)
             } else {
-                console.log(`Email successfully sent!`, info.response)
+                console.log(`GAR Email successfully sent!`, info.response)
             }
         })
         res.status(200).send('Success!')
@@ -50,7 +50,7 @@ router.post('/create/tsu', (req, res) => {
             if (err) {
                 console.log(err)
             } else {
-                console.log(`Email successfully sent!`, info.response)
+                console.log(`TSU Email successfully sent!`, info.response)
             }
         })
         res.status(200).send('Success!')
@@ -73,7 +73,7 @@ router.post('/create/hre', (req, res) => {
             if (err) {
                 console.log(err)
             } else {
-                console.log(`Email successfully sent!`, info.response)
+                console.log(`HRE Email successfully sent!`, info.response)
             }
         })
         res.status(200).send('Success!')
