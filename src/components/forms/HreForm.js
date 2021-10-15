@@ -52,7 +52,7 @@ function HreForm() {
     }
 
     return (
-        <form action="submit" onSubmit={handleSubmit}>
+        <form action="submit" onSubmit={handleSubmit} autoComplete="off">
             <FormControl isRequired>
                 <Flex mt="5">
                     <Box mr="2">
