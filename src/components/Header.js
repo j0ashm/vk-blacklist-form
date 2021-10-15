@@ -16,7 +16,7 @@ function Header() {
             </Box>
             <Spacer />
             <Box p="3">
-                <IconButton icon={icons} variant="ghost" onClick={toggleColorMode} aria-label={colorMode == 'light' ? "Switch to dark mode" : "Switch to light mode"}/>
+                <IconButton icon={icons} variant="ghost" onClick={toggleColorMode} aria-label={colorMode === 'light' ? "Switch to dark mode" : "Switch to light mode"}/>
             </Box>
         </Flex>
     )
