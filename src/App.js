@@ -7,10 +7,10 @@ import {Helmet} from "react-helmet"
 function App() {
   return (
     <>
-      <Helmet htmlAttributes>
-        <html lang="en" />
-        <title>V&K Blacklist Form</title>
-      </Helmet>
+    <Helmet htmlAttributes>
+      <html lang="en" />
+      <title>V&K Blacklist Form</title>
+    </Helmet>
       <Container size="container.md" centerContent>
         <Header />
         <BLForm />
