@@ -9,7 +9,7 @@ function Footer() {
             </Box>
             <Spacer />
             <Box p="2">
-                <Text align="right">Reload the page to reset form</Text>
+                <Text align="right">Reload the page to pick a different form</Text>
             </Box>
         </Flex>
     )
