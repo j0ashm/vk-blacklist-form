@@ -88,7 +88,7 @@ function HreForm() {
                     <RadioGroup name="division">
                         <Stack spacing="5px">
                         <Radio value="Universal" onChange={onInputChange}>Universal</Radio>
-                        <Radio value="Knighthood" onChange={onInputChange}>Universal</Radio>
+                        <Radio value="Knighthood" onChange={onInputChange}>Knighthood</Radio>
                         <Radio value="Duchy of Bavaria" onChange={onInputChange}>Duchy of Bavaria</Radio>
                         <Radio value="Duchy of Bohemia" onChange={onInputChange}>Duchy of Bohemia</Radio>
                         <Radio value="Duchy of Luxembourg" onChange={onInputChange}>Duchy of Luxembourg</Radio>
