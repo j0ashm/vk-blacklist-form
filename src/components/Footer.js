@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, Flex, Spacer, Text } from '@chakra-ui/layout'
-import { BsCodeSlash } from 'react-icons/bs'
+
 function Footer() {
     return (
         <Flex borderTop="1px" mt="5">
