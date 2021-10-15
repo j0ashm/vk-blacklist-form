@@ -16,6 +16,6 @@ app.use((err, req, res, next) => {
     res.status(422).send({error: err.message})
 })
 
-app.listen(5000, () => {
+app.listen(process.env.PORT, () => {
     console.log('Server is up!')
 });
