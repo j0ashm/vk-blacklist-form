@@ -42,7 +42,7 @@ function GarForm() {
         .then(res => {
             console.log(res)
             successToast({
-                title: `Form Submitted!`,
+                title: `GAR Blacklist Submitted!`,
                 description: `Your blacklist request has been submitted for user: ${formValues.toBLUsername}!`,
                 status: 'success',
                 duration: 10000,
