@@ -26,6 +26,10 @@ const BlacklistSchema = new Schema({
         type: String,
         required: true
     },
+    evidence: {
+        type: String,
+        required: true
+    },
     division: {
         type: String,
         required: true

@@ -15,8 +15,8 @@ var mailer = nodemailer.createTransport({
 
 router.post('/create/gar', (req, res) => {
     Blacklist.create(req.body).then((bl) => {
-        const { submitterUsername, toBLUsername, profileLink, discordID, blReason, division, duration, status } = bl
-        let mailBody = `**[${division}] Blacklist**\n\n________\n**Username:** ${toBLUsername}\n**ROBLOX Profile Link:** ${profileLink}\n**Discord ID:** ${discordID}\n________\n**Reason:** ${blReason}\n**Duration:** ${duration}\n**Status:** ${status}\n**Assigned by:** ${submitterUsername}`
+        const { submitterUsername, toBLUsername, profileLink, discordID, blReason, evidence, division, duration, status } = bl
+        let mailBody = `**[${division}] Blacklist**\n\n________\n**Username:** ${toBLUsername}\n**ROBLOX Profile Link:** ${profileLink}\n**Discord ID:** ${discordID}\n________\n**Reason:** ${blReason}\n**Evidence:** ${evidence}\n**Duration:** ${duration}\n**Status:** ${status}\n**Assigned by:** ${submitterUsername}`
 
         mailer.sendMail({
             from: process.env.GMAIL_USER,
@@ -38,8 +38,8 @@ router.post('/create/gar', (req, res) => {
 
 router.post('/create/tsu', (req, res) => {
     Blacklist.create(req.body).then((bl) => {
-        const { submitterUsername, toBLUsername, profileLink, discordID, blReason, division, duration, status } = bl
-        let mailBody = `**[${division}] Blacklist**\n\n________\n**Username:** ${toBLUsername}\n**ROBLOX Profile Link:** ${profileLink}\n**Discord ID:** ${discordID}\n________\n**Reason:** ${blReason}\n**Duration:** ${duration}\n**Status:** ${status}\n**Assigned by:** ${submitterUsername}`
+        const { submitterUsername, toBLUsername, profileLink, discordID, blReason, evidence, division, duration, status } = bl
+        let mailBody = `**[${division}] Blacklist**\n\n________\n**Username:** ${toBLUsername}\n**ROBLOX Profile Link:** ${profileLink}\n**Discord ID:** ${discordID}\n________\n**Reason:** ${blReason}\n**Evidence:** ${evidence}\n**Duration:** ${duration}\n**Status:** ${status}\n**Assigned by:** ${submitterUsername}`
 
         mailer.sendMail({
             from: process.env.GMAIL_USER,
@@ -61,8 +61,8 @@ router.post('/create/tsu', (req, res) => {
 
 router.post('/create/hre', (req, res) => {
     Blacklist.create(req.body).then((bl) => {
-        const { submitterUsername, toBLUsername, profileLink, discordID, blReason, division, duration, status } = bl
-        let mailBody = `**[${division}] Blacklist**\n\n________\n**Username:** ${toBLUsername}\n**ROBLOX Profile Link:** ${profileLink}\n**Discord ID:** ${discordID}\n________\n**Reason:** ${blReason}\n**Duration:** ${duration}\n**Status:** ${status}\n**Assigned by:** ${submitterUsername}`
+        const { submitterUsername, toBLUsername, profileLink, discordID, blReason, evidence, division, duration, status } = bl
+        let mailBody = `**[${division}] Blacklist**\n\n________\n**Username:** ${toBLUsername}\n**ROBLOX Profile Link:** ${profileLink}\n**Discord ID:** ${discordID}\n________\n**Reason:** ${blReason}\n**Evidence:** ${evidence}\n**Duration:** ${duration}\n**Status:** ${status}\n**Assigned by:** ${submitterUsername}`
 
         mailer.sendMail({
             from: process.env.GMAIL_USER,

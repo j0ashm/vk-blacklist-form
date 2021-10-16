@@ -27,7 +27,7 @@ function TsuForm() {
 
     function handleSubmit(e) {
         e.preventDefault();
-        const { submitterUsername, toBLUsername, profileLink, discordID, reason, division, duration, status } = formValues 
+        const { submitterUsername, toBLUsername, profileLink, discordID, reason, evidence, division, duration, status } = formValues 
 
         axios.post(`${process.env.REACT_APP_POST_URL}/tsu`, {
             submitterUsername: `${submitterUsername}`,
@@ -35,6 +35,7 @@ function TsuForm() {
             profileLink: `${profileLink}`,
             discordID: `${discordID}`,
             blReason: `${reason}`,
+            evidence: `${evidence}`,
             division: `${division}`,
             duration: `${duration}`,
             status: `${status}`
@@ -81,6 +82,11 @@ function TsuForm() {
                 <Box mt="5">
                     <FormLabel>Reason for Blacklist</FormLabel>
                     <Input name="reason" type="text" placeholder="bro why blacklist?" defaultValue={formValues.blReason} onChange={onInputChange}/>
+                </Box>
+
+                <Box mt="5">
+                    <FormLabel>Evidence</FormLabel>
+                    <Input name="evidence" type="text" placeholder="Enter evidence here" defaultValue={formValues.blReason} onChange={onInputChange}/>
                 </Box>
 
                 <Box mt="5">
