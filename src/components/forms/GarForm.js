@@ -103,7 +103,7 @@ function GarForm() {
                         <Radio value="327th Star Corps" onChange={onInputChange}>327th Star Corps</Radio>
                         <Radio value="41st Elite Corps" onChange={onInputChange}>41st Elite Corps</Radio>
                         <Radio value="Advanced Recon Commandos" onChange={onInputChange}>Advanced Recon Commandos</Radio>
-                        <Radio value="Advanced Recon Commandos" onChange={onInputChange}>Biker Advanced Recon Commandos</Radio>
+                        <Radio value="Biker Advanced Recon Commandos" onChange={onInputChange}>Biker Advanced Recon Commandos</Radio>
                         <Radio value="7th Sky Corps" onChange={onInputChange}>7th Sky Corps</Radio>
                         <Radio value="187th Legion" onChange={onInputChange}>187th Legion</Radio>
                         </Stack>
