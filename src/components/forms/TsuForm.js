@@ -102,6 +102,7 @@ function TsuForm() {
                         <Radio value="5th" onChange={onInputChange}>5th</Radio>
                         <Radio value="Spetsnaz" onChange={onInputChange}>Spetsnaz</Radio>
                         <Radio value="OMON" onChange={onInputChange}>OMON</Radio>
+                        <Radio value="MDD" onChange={onInputChange}>MDD</Radio>
                         <Radio value="Senior Politburo" onChange={onInputChange}>Senior Politburo</Radio>
                         <Radio value="MoD" onChange={onInputChange}>MoD</Radio>
                         <Radio value="TSM" onChange={onInputChange}>TSM</Radio>
